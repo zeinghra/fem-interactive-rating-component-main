@@ -1,0 +1,177 @@
+/*_________FONTS_________*/
+
+/*_________RESET_________*/
+
+* {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+*::before,
+*::after,
+* {
+    box-sizing: border-box;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*_________VARIABLES_________*/
+
+:root {
+    --clr-primary: hsl(25, 97%, 53%);
+
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-gray: hsl(217, 12%, 63%);
+    --clr-dark-gray: hsl(216, 12%, 54%);
+    --clr-blue: hsl(213, 19%, 18%);
+    --clr-dark-blue: hsl(216, 12%, 8%);
+
+    --card-gradient: linear-gradient(
+        #222933,
+        #16202c
+    );
+
+    --font-family-default: 'Overpass', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --fs-1: .5rem;
+    --fs-2: .75rem;
+    --fs-3: clamp(0.75rem, 3vw,.9375rem);
+    --fs-4: 1.25rem;
+    --fs-5: clamp(1.25rem, 5vw,1.5rem);
+    --fs-6: 2rem;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-family-default);
+    font-size: var(--fs-3);
+    background-color: var(--clr-dark-blue);
+    display: grid;
+    place-content: center;
+    justify-items: center;
+}
+
+main {
+    max-width: min(25.625rem, 90%);
+}
+
+.container {
+    background-image: var(--card-gradient);
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.container.thankU {
+    text-align: center;
+    padding: 2.25rem;
+}
+
+.container.thankU img {
+    margin-inline: auto;
+    margin-bottom: 2rem;
+}
+
+.rating-d {
+    margin-bottom: 2rem;
+    background-color: var(--clr-blue);
+    color: var(--clr-primary);
+    display: inline-block;
+    padding: .25rem 1rem;
+    border-radius: 10rem;
+}
+
+
+.card-icon {
+    width: 48px;
+    padding: 15px;
+    background-color: var(--clr-blue);
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 1.5rem;
+}
+
+
+label span {
+    width: clamp(2.625rem, 10vw,3.1875rem);
+    aspect-ratio: 1 / 1;
+    background-color: var(--clr-blue);
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+
+    color: var(--clr-gray);
+    font-weight: var(--fw-regular);
+    font-size: 1rem;
+}
+
+label:hover span {
+    background-color: var(--clr-primary);
+    color: white;
+    transition: .2s linear;
+    cursor: pointer;
+}
+
+label > input:checked + span {
+
+    background-color: var(--clr-gray);
+    color: white;
+}
+input[type="radio"] {
+    position:absolute;
+    left: -625rem;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-block: .75rem;
+    border-radius: 10rem;
+    border: none;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    appearance: none;
+    outline: none;
+    transition: .2s linear;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--clr-white);
+    color: var(--clr-primary);
+    cursor: pointer;
+}
+
+
+/*_________TYPOGHRAPHY_________*/
+
+h1 {
+    font-size: var(--fs-5);
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+    margin-bottom: .875rem;
+}
+
+p {
+    color: var(--clr-gray);
+    line-height: 1.6;
+}
